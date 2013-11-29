@@ -8,6 +8,7 @@ class Task {
 	Date dateCreated
 	Date deadline
 	Long timeSpent = 0L
+	String procrastinable
 	
 	static hasMany = [tags: pomodoroapp.Tag]
 	
@@ -17,5 +18,6 @@ class Task {
 		status inList:["Open","Done"]
 		deadline nullable:true
 		timeSpent min: 0L
+		procrastinable inList:["Yes","No"]
     }
 }
